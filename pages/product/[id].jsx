@@ -94,8 +94,12 @@ const Product = ({ pizza }) => {
 };
 
 export const getServerSideProps = async ({ params }) => {
+  // checking the environment
+  let dev = process.env.NODE_ENV !== 'production';
+  let { DEV_URL, PROD_URL } = process.env;
+
   const res = await axios.get(
-    `http://localhost:3000/api/products/${params.id}`
+    `${dev ? DEV_URL : PROD_URL}/api/products/${params.id}`
   );
   return {
     props: {

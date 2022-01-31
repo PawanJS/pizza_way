@@ -17,7 +17,6 @@ export default function Home({ pizzaList }) {
       </Head>
       <Featured />
       <PizzaList pizzaList={pizzaList} />
-      {console.log(process.env.NODE_ENV)}
     </div>
   );
 }

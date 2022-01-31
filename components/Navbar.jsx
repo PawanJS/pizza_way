@@ -2,6 +2,8 @@ import Image from 'next/image';
 import styles from '../styles/Navbar.module.css';
 
 export const Navbar = () => {
+  console.log(process.env.NODE_ENV);
+
   return (
     <div className={styles.container}>
       <div className={styles.item}>

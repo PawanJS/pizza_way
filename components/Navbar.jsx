@@ -2,10 +2,7 @@ import Image from 'next/image';
 import styles from '../styles/Navbar.module.css';
 
 export const Navbar = () => {
-  let { DEV_URL, PROD_URL } = process.env;
-
-  console.log(DEV_URL);
-  console.log(PROD_URL);
+  console.log(process.env.NODE_ENV);
 
   return (
     <div className={styles.container}>

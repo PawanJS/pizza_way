@@ -5,8 +5,6 @@ import { Featured } from '../components/Featured';
 import { PizzaList } from '../components/PizzaList';
 import styles from '../styles/Home.module.css';
 
-const DEV_URL = process.env.DEV_URL;
-
 export default function Home({ pizzaList }) {
   return (
     <div className={styles.container}>
